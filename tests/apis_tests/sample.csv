@@ -1,0 +1,6 @@
+TC;Headers;Url;Requests
+TC1;Content-Type/application-json;www.google.com;{"key":"values"}
+TC2;Content-Type/text;www.facebook.com;{"key":"values"}
+TC3;Content-Type/audio;www.instaa.com;{"key":"values"}
+TC4;Content-Type/raw;www.abc.com;{"key":"values"}
+TC5;Content-Type/other;www.ashmita.com;{"key":"values"}

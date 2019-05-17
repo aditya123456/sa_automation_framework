@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190517 14:31:29.305" generator="Robot 3.1.1 (Python 2.7.13 on win32)">
+<suite source="C:\Users\prata\PycharmProjects\sa_api_automaton_framework\tests\apis_tests\execel.robot" id="s1" name="Execel">
+<test id="s1-t1" name="API Demo Post Request">
+<kw name="Read Excel Using Xlrd" library="EXCELLibray">
+<arguments>
+<arg>sample.xlsx</arg>
+<arg>Y</arg>
+</arguments>
+<assign>
+<var>${all_values}</var>
+</assign>
+<msg timestamp="20190517 14:31:30.070" level="INFO">[u'TC', u'executionFlag', u'Header', u'URL', u'firstName', u'lastName', u'Value1', u'Value2']
+[{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}, {u'firstName': u'Ashmita', u'URL': u'www.google.com', u'lastName': u'Sharma', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 2.0, u'TC': u'TC2', u'Value2': 7.0}, {u'firstName': u'Adi', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 3.0, u'TC': u'TC3', u'Value2': 8.0}, {u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}, {u'firstName': u'Ashmi', u'URL': u'www.google.com', u'lastName': u'Sharma', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 5.0, u'TC': u'TC5', u'Value2': 10.0}]
+[{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}, {u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}]
+[{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}, {u'firstName': u'Ashmita', u'URL': u'www.google.com', u'lastName': u'Sharma', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 2.0, u'TC': u'TC2', u'Value2': 7.0}, {u'firstName': u'Adi', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 3.0, u'TC': u'TC3', u'Value2': 8.0}, {u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}, {u'firstName': u'Ashmi', u'URL': u'www.google.com', u'lastName': u'Sharma', u'Header': u'Content-Type', u'executionFlag': u'N', u'Value1': 5.0, u'TC': u'TC5', u'Value2': 10.0}]</msg>
+<msg timestamp="20190517 14:31:30.070" level="INFO">${all_values} = [{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}, {u'firstName': u'Adi1',...</msg>
+<status status="PASS" endtime="20190517 14:31:30.070" starttime="20190517 14:31:30.063"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${all_values}</arg>
+</arguments>
+<msg timestamp="20190517 14:31:30.071" level="INFO">[{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}, {u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}]</msg>
+<status status="PASS" endtime="20190517 14:31:30.072" starttime="20190517 14:31:30.071"></status>
+</kw>
+<kw type="for" name="${INDEX} IN [ @{all_values} ]">
+<kw type="foritem" name="${INDEX} = {u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg timestamp="20190517 14:31:30.073" level="INFO">{u'firstName': u'Aditya', u'URL': u'www.google.com', u'lastName': u'Singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 1.0, u'TC': u'TC1', u'Value2': 6.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.073" starttime="20190517 14:31:30.073"></status>
+</kw>
+<kw name="Put Values In Json" library="EXCELLibray">
+<arguments>
+<arg>${INDEX}[firstName]</arg>
+<arg>${INDEX}[lastName]</arg>
+<arg>${INDEX}[Value1]</arg>
+<arg>${INDEX}[Value2]</arg>
+</arguments>
+<assign>
+<var>${json_request}</var>
+</assign>
+<msg timestamp="20190517 14:31:30.074" level="INFO">${json_request} = {'lastName': u'Singh', 'value1': 1.0, 'firstName': u'Aditya', 'value2': 6.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.074" starttime="20190517 14:31:30.073"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${json_request}</arg>
+</arguments>
+<msg timestamp="20190517 14:31:30.075" level="INFO">{'lastName': u'Singh', 'value1': 1.0, 'firstName': u'Aditya', 'value2': 6.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.075" starttime="20190517 14:31:30.075"></status>
+</kw>
+<status status="PASS" endtime="20190517 14:31:30.075" starttime="20190517 14:31:30.073"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = {u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg timestamp="20190517 14:31:30.076" level="INFO">{u'firstName': u'Adi1', u'URL': u'www.google.com', u'lastName': u'singh', u'Header': u'Content-Type', u'executionFlag': u'Y', u'Value1': 4.0, u'TC': u'TC4', u'Value2': 9.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.076" starttime="20190517 14:31:30.075"></status>
+</kw>
+<kw name="Put Values In Json" library="EXCELLibray">
+<arguments>
+<arg>${INDEX}[firstName]</arg>
+<arg>${INDEX}[lastName]</arg>
+<arg>${INDEX}[Value1]</arg>
+<arg>${INDEX}[Value2]</arg>
+</arguments>
+<assign>
+<var>${json_request}</var>
+</assign>
+<msg timestamp="20190517 14:31:30.077" level="INFO">${json_request} = {'lastName': u'singh', 'value1': 4.0, 'firstName': u'Adi1', 'value2': 9.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.077" starttime="20190517 14:31:30.076"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${json_request}</arg>
+</arguments>
+<msg timestamp="20190517 14:31:30.077" level="INFO">{'lastName': u'singh', 'value1': 4.0, 'firstName': u'Adi1', 'value2': 9.0}</msg>
+<status status="PASS" endtime="20190517 14:31:30.078" starttime="20190517 14:31:30.077"></status>
+</kw>
+<status status="PASS" endtime="20190517 14:31:30.078" starttime="20190517 14:31:30.075"></status>
+</kw>
+<status status="PASS" endtime="20190517 14:31:30.078" starttime="20190517 14:31:30.072"></status>
+</kw>
+<status status="PASS" endtime="20190517 14:31:30.078" critical="yes" starttime="20190517 14:31:30.062"></status>
+</test>
+<status status="PASS" endtime="20190517 14:31:30.081" starttime="20190517 14:31:29.311"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Execel" pass="1">Execel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
